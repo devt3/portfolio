@@ -10,30 +10,27 @@
 :root{
   font-size: 10px;
   font-family: "Carter One";
-  --text-darkmode: #ffd5af;
-  --text-lightmode: #073459;
-  --bg-darkmode: #333c4d;
+  --bg-darkmode: #040412;
+  --text-darkmode: #ffffff;
   --bg-lightmode: #ffffff;
+  --text-lightmode: #040412;
 }
 
 html,
-body {
+body,
+#root {
   color: var(--text-darkmode);
   background-color: var(--bg-darkmode);
   margin: 0;
   padding: 0;
 }
 
-.mainroute {
-  margin-left: 5vw;
-  padding: 1rem;
+#root {
+  display: flex;
 }
 
-
-#root {
-  /* margin-left: 5rem; 
-  padding: 1rem; */
-  /* display: flex;
-  align-items: center;
-  justify-content: space-evenly; */
+.mainroute {
+  width: 100%;
+  padding: 1vw;
+  background: #ffffff20;
 }

@@ -3,21 +3,30 @@
 Default Navbar state
 */
 
+:root{
+    --initial-width: 4vw; //the width used for the navbar to start & the logo
+    --svg-size: 3vw; //used for the svg icons' minimum height and width
+}
+
 .logo {
-    width: 5vw;
-    border: 2px solid black;
+    width: var(--initial-width);
 }
 
 .navbar {
-    width: 5vw;
+    width: var(--initial-width);
     height: 100vh;
-    position: fixed;
-    background-color: var(--bg-lightmode);
-    transition: 500ms ease;
+    background-color: var(--bg-darkmode);
+    flex-shrink: 0; //ensures the navbar element doesn't shrick itself, as the mainroute overlaps without the code
+    transition: 500ms ease; //when any property of the navbar changes, it has a transition that eases at 500ms
 }
 
 .navbar-nav {
-    height: 100%;
+    width: var(--initial-width);
+    height: 100vh;
+    position: fixed;
+    //"position: fixed" ensures the navigation doesn't move with the page, 
+    //because having a fixed position takes the element out of the flow of the page,
+    //it hass been added to the ul-element instead of the nav-element encompassing it.
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,6 +34,7 @@ Default Navbar state
     margin: 0;
     padding: 0;
     overflow: hidden;
+    transition: 500ms ease;
   }
 
 li.nav-item {
@@ -33,8 +43,7 @@ li.nav-item {
 }
 
 .nav-item:first-child {
-    padding-bottom: 0;
-    padding-top: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
 }
@@ -48,17 +57,18 @@ a.nav-item-active, a.nav-item-inactive {
 }
 
 a.nav-item-active svg, a.nav-item-inactive svg {
-    min-width: 4vw;
-    min-height: 4vw;
+    min-width: var(--svg-size);
+    min-height: var(--svg-size);
     margin: 0 0.5vw;
 }
 
 a.nav-item-inactive{
-    color: #ffd5af
+    color: var(--text-darkmode);
+    opacity: 30%;
 }
 
 a.nav-item-active{
-    color: blue;
+    color: #f3a86b
 }
 
 .nav-item-text {
@@ -72,18 +82,14 @@ a.nav-item-active{
    margin-top: auto;
 }
 
-/* 
+/*
 Hover Navbar state
 */
 
-.navbar:hover {
-    width: 15vw;
+.navbar:hover, .navbar:hover .navbar-nav {
+    width: 12vw;
 }
 
 .navbar:hover span {
   opacity: 1;
-}
-
-.navbar:hover .nav-item .logo img {
-   
 }

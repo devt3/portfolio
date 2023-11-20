@@ -24,9 +24,9 @@ Default Navbar state
     width: var(--initial-width);
     height: 100vh;
     position: fixed;
-    //"position: fixed" ensures the navigation doesn't move with the page, 
-    //because having a fixed position takes the element out of the flow of the page,
-    //it hass been added to the ul-element instead of the nav-element encompassing it.
+    //"position: fixed" ensures the navigation doesn't move with the page. 
+    //However, because having a fixed position takes the element out of the flow of the page,
+    //it hass been added to the ul-element instead of the nav-element encompassing it to get around that.
     display: flex;
     flex-direction: column;
     justify-content: center;

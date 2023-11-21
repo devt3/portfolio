@@ -1,18 +1,112 @@
-.mainroute {
+.header {
     text-align: center;
 }
 
 h1 {
-    font-size: 10vw;
-    margin: 0
+    font-size: 5vw;
 }
 
 h2 {
     font-size: 1.5vw;
-    margin: 0;
+}
+
+div {
+    font-size: 1.5vw;
 }
 
 .skills-and-socials {
     display: flex;
-    gap: 1vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+} 
+
+.skills, .socials {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    width: 45%;
+    padding: 1vw;
 }
+
+.socials{
+    background-color: #ffffff05;
+}
+
+.skills{
+    background-color: #ffffff03;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: auto;
+}
+
+button {
+    align-self: center;
+    margin-top: 5vw;
+}
+
+.button {
+    text-decoration: none;
+    align-self: center;
+    margin-top: 5vw;
+    padding: 0.5vw 1vw;
+    background-color:  #f3a86b8a;
+    border-radius: 5px;
+    color: #000000;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+
+.button:hover{
+    top: -5px;
+
+}
+
+.skillsList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill-item {
+    margin: 5px;
+    padding: 5px;
+    background-color:  #ffffff0f;
+   
+}
+
+.socialsList {
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 5vw;
+    row-gap: 2vw
+}
+
+.socialsList svg {
+    min-width: 5vw;
+    min-height: 5vw;
+}
+
+.social-item{
+    transition: 500ms ease;
+}
+
+.social-item:hover {
+    color: #f3a86b;
+   
+   
+}
+
+.circleSVG {
+    color: #ffffff07;
+}
+
+
+

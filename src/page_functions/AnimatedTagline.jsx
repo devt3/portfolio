@@ -1,3 +1,8 @@
+/* 
+The class works however need to check that time intervals are being cleared when components unmount 
+Future memory leak concerns  
+*/
+
 import React from "react";
 import { useEffect, useState } from "react";
 import "./AnimatedTagline.scss";

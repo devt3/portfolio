@@ -13,13 +13,15 @@ function App() {
     <>
       <Router>
         <Navbar />
-        <Routes>
-          <Route path="/" Component={Homepage} />
-          <Route path="/profile" Component={Profile} />
-          <Route path="/projects" Component={Projects} />
-          <Route path="/contact" Component={Contact} />
-          <Route path="*" Component={PageNotFound} />
-        </Routes>
+        <div className="mainroute">
+          <Routes>
+            <Route path="/" Component={Homepage} />
+            <Route path="/profile" Component={Profile} />
+            <Route path="/projects" Component={Projects} />
+            <Route path="/contact" Component={Contact} />
+            <Route path="*" Component={PageNotFound} />
+          </Routes>
+        </div>
       </Router>
     </>
   );

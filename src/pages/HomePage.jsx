@@ -33,8 +33,8 @@ function Homepage() {
   const skillsToList = document.getElementsByClassName("skills-and-socials");
 
   return (
-    <div className="mainroute">
-      <h1 className="header">Hi, I'm T!</h1>
+    <div className="homepage">
+      <h1 className="home-h1">Hi, I'm T!</h1>
       <AnimatedTagline />
       <div className="skills-and-socials">
         <div className="skills">

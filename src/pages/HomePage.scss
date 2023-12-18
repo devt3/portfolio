@@ -1,17 +1,19 @@
-.header {
+.homepage {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-h1 {
     text-align: center;
+    font-size: 75px;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-    font-size: 5vw;
-}
-
-h2 {
-    font-size: 1.5vw;
-}
-
-div {
-    font-size: 1.5vw;
+.typeWriter {
+    font-size: 20px;
 }
 
 .skills-and-socials {
@@ -21,7 +23,8 @@ div {
     gap: 10px;
 } 
 
-.skills, .socials {
+.skills, .socials{
+    background-color: #ffffff04;
     display: flex;
     flex-direction: column;
     min-width: 300px;
@@ -29,13 +32,58 @@ div {
     padding: 1vw;
 }
 
-.socials{
-    background-color: #ffffff05;
+.skills-title, .socials-title {
+    font-size: 20px;
 }
 
-.skills{
-    background-color: #ffffff03;
+//INSIDE THE SKILLS BLOCK BELOW
+
+.skillsList {
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
 }
+
+.skill-item {
+    margin: 5px;
+    padding: 5px;
+    background-color:  #ffffff0f;
+}
+
+//INSIDE THE SOCIAL BLOCK BELOW
+
+.socialsList {
+    height: 100%;
+    align-self: center;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 50px;
+    margin: 10px 0;
+
+}
+
+.socialsList svg {
+    min-width: 100px;
+    min-height: 100px;
+}
+
+.social-item{
+    transition: 500ms ease;
+}
+
+.social-item:hover {
+    color: #f3a86b;
+}
+
+.circleSVG {
+    color: #ffffff07;
+}
+
+//BUTTONS BELOW
 
 .social-buttons {
     display: flex;
@@ -45,15 +93,14 @@ div {
     margin-top: auto;
 }
 
-button {
-    align-self: center;
-    margin-top: 5vw;
+.button {
+    font-size: 20px;
 }
 
 .button {
     text-decoration: none;
     align-self: center;
-    margin-top: 5vw;
+    margin-top: auto;
     padding: 0.5vw 1vw;
     background-color:  #f3a86b8a;
     border-radius: 5px;
@@ -65,48 +112,11 @@ button {
 
 .button:hover{
     top: -5px;
-
 }
 
-.skillsList {
-    display: flex;
-    flex-wrap: wrap;
-}
 
-.skill-item {
-    margin: 5px;
-    padding: 5px;
-    background-color:  #ffffff0f;
-   
-}
 
-.socialsList {
-    align-self: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    column-gap: 5vw;
-    row-gap: 2vw
-}
 
-.socialsList svg {
-    min-width: 5vw;
-    min-height: 5vw;
-}
-
-.social-item{
-    transition: 500ms ease;
-}
-
-.social-item:hover {
-    color: #f3a86b;
-   
-   
-}
-
-.circleSVG {
-    color: #ffffff07;
-}
 
 
 

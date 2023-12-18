@@ -1,7 +1,7 @@
 import React from "react";
 
 function Contact() {
-  return <div className="mainroute">Contact</div>;
+  return <div className="contactpage">Contact</div>;
 }
 
 export default Contact;

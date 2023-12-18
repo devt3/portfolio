@@ -1,0 +1,138 @@
+.profilepage {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    gap: 50px;
+}
+
+.timeline, .about {
+    width: 45%;
+    min-width: 300px;
+    padding: 10px;
+    background-color: #ffffff04;
+}
+
+.about p {
+    font-family:'Poppins';
+    font-size: 20px;
+}
+
+.timeline p {
+    font-family:'Poppins';
+    font-size: 12px;
+}
+
+.about h1, .timeline h1 {
+    font-size: 30px;
+    text-decoration: underline;   
+}
+
+.profilepage ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.profilepage li {
+    position: relative;
+    border: 1px solid #ffffff05;
+    //Don't know why the border-top code below works to add a gap between li items, need to look into this asap
+    border-top: 1px;
+    margin: 0;
+    padding: 0 20px;
+    width: 50%;
+    // max-width: 500px;
+    background-color: #ffffff04;
+}
+
+.profilepage ul li:nth-child(odd){
+    left: 0;
+    text-align: right;
+}
+
+.profilepage ul li:nth-child(even){
+   //transform: translateX(100%);
+   left: 50%;
+   
+}
+
+.profilepage li h2 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.time-container{
+    position: relative;
+    width: 100%;
+}
+
+.profilepage .time-container::after{
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 100%;
+    background-color: #cccccc;
+    transform: translateY(-100%);
+    left: 50%;
+    margin-left: -2.5px ;
+
+}
+
+.profilepage li:nth-child(odd)::after{
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color:#cccccc;
+    border-radius: 50%;
+    top: 0;
+    right: -11px;
+}
+
+.profilepage li:nth-child(even)::after{
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: #cccccc;
+    border-radius: 50%;
+    top: 0;
+    left: -11px;
+}
+
+
+@media screen and (max-width: 900px) {
+    .profilepage .time-container::after{
+        left: 0;
+    }
+
+    .profilepage ul li:nth-child(odd), .profilepage ul li:nth-child(even) {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 25px;
+        left: 0;
+        text-align: left;
+        }
+
+        .profilepage ul li:nth-child(odd)::after, .profilepage ul li:nth-child(even)::after {
+            left: -11px;
+        }
+}
+
+@media screen and (max-width: 900px) {
+    .timeline, .about {
+        width: 100%;
+        padding: 20px;
+        min-width: 300px;
+    }
+}
+
+
+
+
+//ABOUT SECTION
+
+
+
+
+//TIMELINE SECTION

@@ -1,0 +1,238 @@
+
+.project-grid {
+ display: grid;
+ gap: 1rem;
+
+ // setting the column spacings, autofit allows the columns to figure out the overlap
+ grid-template-areas: 
+ 'a a a b b'
+ 'a a a b b'
+ 'a a a b b'
+ 'd d e b b'
+ 'd d c c c'
+ 'd d c c c'
+ 'd d c c c' ;
+
+grid-template-rows: repeat(7, 12.5vh);
+grid-template-columns: repeat(5, 1fr);
+
+
+--stagger-delay: 200ms;
+}
+
+$list: buffer, a, b, c, d, e, f, g;
+
+.project-grid div.project:nth-child(1) {
+    animation-delay: calc(6 * var(--stagger-delay) + 300ms);
+}
+
+@for $i from 2 through 5 {
+    .project-grid div.project:nth-child(#{$i}) {
+        grid-area: nth($list, $i);
+        animation-delay: calc($i * var(--stagger-delay) + 300ms);
+    }
+  }
+
+  @keyframes cardEntrance {
+    from{
+        opacity: 0;
+        background-color: #ff0000;
+        transform: scale(0.1);
+        filter: hue-rotate(180deg);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+        filter: hue-rotate(0deg);
+    }
+  }
+
+  //The project divs stylings
+
+  .project-grid div.project {
+    animation: cardEntrance 700ms ease-out;
+    animation-fill-mode: backwards; 
+    background-color: #ffffff05;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 10px;
+    // overflow:scroll;
+   }
+
+   .project-grid div.project:nth-child(2){
+    background-image: url("../project_images/algorithm\ visualiser.png");
+   }
+
+   .project-grid div.project:nth-child(3){
+    background-image: url("../project_images/assistive\ robot.png");
+    background-size: cover;
+   }
+
+   .project-grid div.project:nth-child(4){
+    background-image: url("../project_images/restaurant\ app.png");
+   }
+
+   .project-grid div.project:nth-child(5){
+    background-image: url("../project_images/autonomous\ vehicle.png");
+    background-size: cover;
+   }
+
+   .project-grid div.project:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   }
+
+//    .project-grid div.project:nth-child(5){
+//     display: none;
+//    }
+
+
+//Actions/State BEFORE we HOVER on a project item
+
+.project-grid h1 {
+    width: fit-content;
+    border-radius: 5px;
+    border: solid;
+    border-color: black;
+    background-color:  #040412;
+    margin: 0 auto;
+    padding: 5px;
+    box-shadow: 0px 0px 5px;
+}
+
+.project-grid div.project:nth-child(1) h1{
+    all: revert;
+    text-align: center;
+    color: gold;
+    font-size: xx-large;
+}
+
+
+
+   .project-grid div.project p{
+    display: none;
+}
+
+.project-grid p {
+    font-family: "Poppins";
+    font-size: 15px;
+}
+
+.project-grid div.project p.tech {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   }
+
+.project-grid div.project p.tech span {
+    width: fit-content;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color:  #040412;
+    border: solid;
+    border-color: black;
+    box-shadow: 0px 0px 5px;
+   }
+
+
+
+//Actions/State AFTER we HOVER on a project item
+
+@media screen and (min-width: 1201px) {
+
+    .project-grid div.project:hover{
+        background-image: none;
+        transform: scale(1.05);
+        border: solid black;
+        box-shadow: 0 0 10px;
+        transition: 500ms ease-in;
+    }
+
+}
+
+.project-grid div.project:hover p:not(p.tech){
+    display: block;
+}
+
+
+@media screen and (max-width: 1200px) {
+    
+    .project-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-grid div.project {
+        background-position: left !important;
+        background-size: 50%;
+        min-height: 25vh;
+    }
+
+    .project-grid p:not(p.tech){
+        display: block;
+    }
+
+    .project-grid div.project-text {
+        width: 50%;
+        padding: 10px;
+    }
+
+    .project-grid div.project:nth-child(even) {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .project-grid div.project:nth-child(1) {
+        display: inline;
+        min-height: fit-content;
+        text-align: left;
+    }
+
+    .project-grid div.project:nth-child(1) div.project-text {
+        width: fit-content;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    .project-grid div.project {
+        background-image: none !important;
+    }
+
+    .project-grid div.project-text {
+        width: 100%;
+        padding: 10px;
+    }
+
+}
+
+
+
+// .project-grid div.project p.tech {
+//     visibility: visible;
+//    }
+
+
+
+
+
+  
+
+
+   
+
+   
+
+
+   
+
+
+
+
+

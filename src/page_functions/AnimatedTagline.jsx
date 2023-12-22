@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import "./AnimatedTagline.scss";
 
 const AnimatedTagline = () => {
+  //the J starts off already on the page
   const startText = "unior ";
 
   const synonymText =

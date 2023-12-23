@@ -116,6 +116,12 @@
     top: -5px;
 }
 
+@media screen and (max-width:625px) {
+    .skills, .socials{
+        width: 90vw;
+    }
+}
+
 
 
 

@@ -93,3 +93,62 @@ Hover Navbar state
 .navbar:hover span {
   opacity: 1;
 }
+
+@media screen and (max-width:700px) {
+
+    #root {
+        display: flex;
+        flex-direction:column;
+      }
+
+    .navbar {
+        all:revert;
+        width: 100vw;
+        height: fit-content;
+        background-color: var(--bg-darkmode);
+    }
+    .navbar-nav {
+        all:revert;
+        width: 100vw;
+        height: fit-content;
+        position: fixed;
+        background-color: var(--bg-darkmode);
+        
+        //"position: fixed" ensures the navigation doesn't move with the page. 
+        //However, because having a fixed position takes the element out of the flow of the page,
+        //it hass been added to the ul-element instead of the nav-element encompassing it to get around that.
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        transition: 500ms ease;
+      }
+
+      .navbar:hover, .navbar:hover .navbar-nav {
+        width: 100vw;
+    }
+    
+
+
+      .nav-item:last-child, .nav-item:first-child, .nav-item-text{
+        display: none;
+     }
+
+     .nav-item {
+        width: fit-content !important;
+     }
+
+     a.nav-item-active svg, a.nav-item-inactive svg {
+        min-width: 50px;
+        min-height: 50px;
+        margin: 0 10px;
+    }
+
+    .mainroute {
+        margin-top: 60px;
+    }
+
+}

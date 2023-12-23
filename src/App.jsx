@@ -11,7 +11,7 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <>
-      <Router basename={import.meta.env.DEV ? "/" : "/react-vite-gh-pages/"}>
+      <Router basename={import.meta.env.DEV ? "/" : "/portfolio/"}>
         <Navbar />
         <div className="mainroute">
           <Routes>

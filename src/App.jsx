@@ -11,14 +11,14 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <>
-      <Router>
+      <Router basename={import.meta.env.DEV ? "/" : "/react-vite-gh-pages/"}>
         <Navbar />
         <div className="mainroute">
           <Routes>
-            <Route path="portfolio/" Component={Homepage} />
-            <Route path="portfolio/profile" Component={Profile} />
-            <Route path="portfolio/projects" Component={Projects} />
-            <Route path="portfolio/contact" Component={Contact} />
+            <Route path="/" Component={Homepage} />
+            <Route path="/profile" Component={Profile} />
+            <Route path="/projects" Component={Projects} />
+            <Route path="/contact" Component={Contact} />
             <Route path="*" Component={PageNotFound} />
           </Routes>
         </div>

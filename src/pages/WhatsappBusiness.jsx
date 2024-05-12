@@ -2,16 +2,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function WhatsappBusiness() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" Component={ChatBot} />
-        <Route path="add-test" Component={ChatBot} />
-      </Routes>
-    </BrowserRouter>
-  );
-}
-
-const ChatBot = () => (
   <div class="container">
     <h1>Welcome to Chatbot Solutions</h1>
     <p>

@@ -7,6 +7,8 @@ import initialT from "./assets/initialT.svg";
 import Navbar from "./Navbar";
 import Profile from "./pages/Profile";
 import Contact from "./pages/Contact";
+import WhatsappBusiness from "./pages/WhatsappBusiness";
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
             <Route path="/profile" Component={Profile} />
             <Route path="/projects" Component={Projects} />
             <Route path="/contact" Component={Contact} />
+            <Route path="/business/*" Component={WhatsappBusiness} />
             <Route path="*" Component={PageNotFound} />
           </Routes>
         </div>

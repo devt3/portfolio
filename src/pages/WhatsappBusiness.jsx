@@ -41,5 +41,6 @@ function WhatsappBusiness() {
     </p>
   </div>
 );
+}
 
 export default WhatsappBusiness;
